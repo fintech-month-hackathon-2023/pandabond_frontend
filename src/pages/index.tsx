@@ -1,12 +1,11 @@
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import Head from 'next/head';
+import NavBar from '@/components/NavBar';
+import MainContent from '@/components/landingpage/MainContent';
+import ServicesDisplay from '@/components/landingpage/ServicesDisplay';
 
 /**
  * SVGR Support
@@ -28,14 +27,11 @@ export default function HomePage() {
           <title>PandaBond</title>
           <link rel='icon' href='/favicon.ico'/>
         </Head>
-
-      <main>
-        <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-          PandaBond Home Page
-          </div>
-        </section>
-      </main>
+        <div className='h-screen relative'>
+          <NavBar isLoggedIn={false}/>
+          <MainContent/>
+          <ServicesDisplay/>
+        </div>
     </Layout>
   );
 }

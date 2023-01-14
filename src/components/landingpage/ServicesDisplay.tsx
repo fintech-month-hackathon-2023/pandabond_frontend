@@ -1,6 +1,6 @@
 import {FC, useState} from 'react';
 import ServiceDisplay from './ServiceDisplay';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const ServicesDisplay: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

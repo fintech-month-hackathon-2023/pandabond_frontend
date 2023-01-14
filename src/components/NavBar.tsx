@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import User from './navbar/User';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 type NavBarProps = {
   isLoggedIn: boolean;

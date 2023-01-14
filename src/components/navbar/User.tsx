@@ -6,7 +6,7 @@ type UserProps = {
 }
 const User: FC<UserProps> = ({isLoggedIn}) => {
   if (isLoggedIn) {
-    return <div>Welcome User</div>
+    return <div>Welcome User!</div>
   } else {
     return (
       <div className='flex gap-10 justify-between'>

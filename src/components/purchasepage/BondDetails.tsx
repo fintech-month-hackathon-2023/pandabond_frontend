@@ -1,12 +1,12 @@
-import {FC} from 'react';
-import type {Bond} from './BondListings';
+import { FC } from 'react';
+import type { Bond } from './BondListings';
 
 type BondDetailsProps = {
   bond: Bond;
-}
-const BondDetails: FC<BondDetailsProps> = ({bond}) => {
+};
+const BondDetails: FC<BondDetailsProps> = ({ bond }) => {
   return (
-    <div className='grow flex justify-between'>
+    <div className='flex grow justify-between'>
       <div>
         <div>Company Name: {bond.symbol}</div>
         <div>Bond Type: {bond.bondType}</div>
@@ -19,5 +19,5 @@ const BondDetails: FC<BondDetailsProps> = ({bond}) => {
       </div>
     </div>
   );
-}
+};
 export default BondDetails;

@@ -60,7 +60,7 @@ const BondListings: FC = () => {
           </div>
         </div>
         {selectedBond && <BondDetails bond={selectedBond} />}
-        <PurchaseBond href=''>Purchase Bond</PurchaseBond>
+        <PurchaseBond />
       </div>
       <div
         onClick={() => setIsModalOpen(false)}

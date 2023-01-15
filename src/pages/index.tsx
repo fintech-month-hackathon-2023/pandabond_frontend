@@ -23,15 +23,15 @@ export default function HomePage() {
   return (
     <Layout>
       <Seo />
-        <Head>
-          <title>PandaBond</title>
-          <link rel='icon' href='/favicon.ico'/>
-        </Head>
-        <div className='h-screen relative'>
-          <NavBar isLoggedIn={false}/>
-          <MainContent/>
-          <ServicesDisplay/>
-        </div>
+      <Head>
+        <title>PandaBond</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <div className='relative h-screen'>
+        <NavBar isLoggedIn={false} />
+        <MainContent />
+        <ServicesDisplay />
+      </div>
     </Layout>
   );
 }

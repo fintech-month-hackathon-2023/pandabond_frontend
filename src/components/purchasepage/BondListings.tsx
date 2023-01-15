@@ -1,7 +1,8 @@
 import { FC, useState } from 'react';
-import BondListing from './BondListing';
+
 import BondDetails from './BondDetails';
-import Link from 'next/link';
+import BondListing from './BondListing';
+import PurchaseBond from './PurchaseBond';
 
 export type Bond = {
   symbol: string;
@@ -44,6 +45,7 @@ const BondListings: FC = () => {
     setIsModalOpen(true);
     setSelectedBond(bonds[index]);
   };
+
   return (
     <div>
       <div
@@ -58,7 +60,7 @@ const BondListings: FC = () => {
           </div>
         </div>
         {selectedBond && <BondDetails bond={selectedBond} />}
-        <Link href=''>Purchase Bond</Link>
+        <PurchaseBond href=''>Purchase Bond</PurchaseBond>
       </div>
       <div
         onClick={() => setIsModalOpen(false)}

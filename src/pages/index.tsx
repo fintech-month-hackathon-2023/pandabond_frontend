@@ -1,11 +1,11 @@
+import Head from 'next/head';
 import * as React from 'react';
 
-import Layout from '@/components/layout/Layout';
-import Seo from '@/components/Seo';
-import Head from 'next/head';
-import NavBar from '@/components/NavBar';
 import MainContent from '@/components/landingpage/MainContent';
 import ServicesDisplay from '@/components/landingpage/ServicesDisplay';
+import Layout from '@/components/layout/Layout';
+import NavBar from '@/components/NavBar';
+import Seo from '@/components/Seo';
 
 /**
  * SVGR Support

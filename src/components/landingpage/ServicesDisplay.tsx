@@ -1,6 +1,7 @@
-import { FC, useState } from 'react';
-import ServiceDisplay from './ServiceDisplay';
 import Link from 'next/link';
+import { FC, useState } from 'react';
+
+import ServiceDisplay from './ServiceDisplay';
 
 const ServicesDisplay: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,12 +35,12 @@ const ServicesDisplay: FC = () => {
       <ServiceDisplay
         setService={setService}
         setIsModalOpen={setIsModalOpen}
-        service={'Create Your Own Bonds'}
+        service='Create Your Own Bonds'
       />
       <ServiceDisplay
         setService={setService}
         setIsModalOpen={setIsModalOpen}
-        service={'purchase bonds'}
+        service='purchase bonds'
       />
     </div>
   );

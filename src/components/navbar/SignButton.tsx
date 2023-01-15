@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import Link from 'next/link';
 
 type SignButtonProps = {
   children: string;
@@ -6,7 +7,8 @@ type SignButtonProps = {
 const SignButton: FC<SignButtonProps> = ({ children }) => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div
+    <Link
+      href='/login'
       className={`${
         isHover ? 'bg-black text-white' : ''
       } cursor-pointer rounded border border-black p-2`}
@@ -14,7 +16,7 @@ const SignButton: FC<SignButtonProps> = ({ children }) => {
       onMouseLeave={() => setIsHover(false)}
     >
       {children}
-    </div>
+    </Link>
   );
 };
 export default SignButton;

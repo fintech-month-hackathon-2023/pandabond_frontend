@@ -1,10 +1,11 @@
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import { FaGoogle, FaRegEnvelope } from 'react-icons/fa';
 import { MdLockOutline } from 'react-icons/md';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
 
-export default function SignInPage() {
+const SignInPage: NextPage = () => {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center bg-gray-100 py-2'>
       <Head>
@@ -84,4 +85,5 @@ export default function SignInPage() {
       </main>
     </div>
   );
-}
+};
+export default SignInPage;

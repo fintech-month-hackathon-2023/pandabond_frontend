@@ -1,11 +1,10 @@
-/* eslint-disable unused-imports/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 
-const PurchaseBond = () => {
+const ConnectWallet = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [defaultAccount, setDefaultAccount] = useState(null);
-  const [purchaseButtonText, setPurchaseButtonText] = useState('Purchase Bond');
+  const [connButtonText, setConnButtonText] = useState('Connect Wallet');
 
   // const [currentContractVal, setCurrentContractVal] = useState(null);
 
@@ -21,7 +20,7 @@ const PurchaseBond = () => {
         .request({ method: 'eth_requestAccounts' })
         .then((result: any) => {
           accountChangedHandler(result[0]);
-          setPurchaseButtonText('Wallet Connected');
+          setConnButtonText('Wallet Connected');
         });
     } else {
       setErrorMessage('Need to install MetaMask!');
@@ -60,8 +59,9 @@ const PurchaseBond = () => {
         onClick={connectWalletHandler}
         className='mb-3 inline-block rounded-full border-2 border-red-500 px-12 py-2 font-semibold text-red-500 hover:bg-red-500 hover:text-white'
       >
-        {purchaseButtonText}
+        {connButtonText}
       </button>
+      <p> Address: {defaultAccount} </p>
 
       {/* <form onSubmit={setHandler}>
               <input id='setText' type='text'/>
@@ -75,4 +75,4 @@ const PurchaseBond = () => {
   );
 };
 
-export default PurchaseBond;
+export default ConnectWallet;

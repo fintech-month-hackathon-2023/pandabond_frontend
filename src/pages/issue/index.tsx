@@ -13,8 +13,10 @@ const IssuePage: NextPage = () => {
     <div className='h-screen'>
       <NavBar isLoggedIn={true} />
       <div className='flex h-full flex-col gap-10'>
-        <div className='flex flex-col'>
-          <div className='text-center'>Choose your bond</div>
+        <div className='flex flex-col gap-1'>
+          <div className='text-center text-2xl font-bold text-red-500'>
+            Choose your bond
+          </div>
           <BondButtons
             yoe={yoe}
             selectedBond={selectedBond}
@@ -22,18 +24,26 @@ const IssuePage: NextPage = () => {
           />
         </div>
         <div className='flex flex-col'>
-          <div className='self-center'>Time (Maturity Date)</div>
+          <div className='self-center text-lg font-bold text-red-500'>
+            Time (Maturity Date)
+          </div>
           <MaturitySlider />
         </div>
         <div className='flex flex-col'>
-          <div className='self-center'>Volume/Capital</div>
-          <CouponRateInput bondNumber={selectedBond} />
-        </div>
-        <div className='flex flex-col'>
-          <div className='self-center'>Volume/Capital</div>
+          <div className='self-center text-lg font-bold text-red-500'>
+            Volume/Capital
+          </div>
           <CapitalSlider />
         </div>
-        <div className='self-center'>Company Details</div>
+        <div className='flex flex-col'>
+          <div className='self-center text-lg font-bold text-red-500'>
+            Target Coupon Rate
+          </div>
+          <CouponRateInput bondNumber={selectedBond} />
+        </div>
+        <div className='self-center text-lg font-bold text-red-500'>
+          Relevant Company Financial Details
+        </div>
         <input className='self-center' type='file' />
       </div>
     </div>

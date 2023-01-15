@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 type ServiceDisplayProps = {
   service: string;
-  setIsModalOpen: (bool: boolean) => void;
+  setIsModalOpen: (num: number) => void;
   setService: (service: string) => void;
 };
 const ServiceDisplay: FC<ServiceDisplayProps> = ({
@@ -13,7 +13,7 @@ const ServiceDisplay: FC<ServiceDisplayProps> = ({
   return (
     <div
       onClick={() => {
-        setIsModalOpen(true);
+        setIsModalOpen(service == 'Create Your Own Bonds' ? 1 : 2);
         setService(service);
       }}
       className='cursor-pointer'

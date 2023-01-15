@@ -7,8 +7,10 @@ type NavBarProps = {
 };
 const NavBar: FC<NavBarProps> = ({ isLoggedIn }) => {
   return (
-    <div className='flex items-center justify-between p-5'>
-      <Link href='/'>PandaBond</Link>
+    <div className='flex items-center justify-between p-5 font-bold'>
+      <Link className='text-xl' href='/'>
+        PandaBond
+      </Link>
       <User isLoggedIn={isLoggedIn} />
     </div>
   );

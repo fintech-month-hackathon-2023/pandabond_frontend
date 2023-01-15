@@ -14,7 +14,13 @@ const BondButton: FC<BondButtonProps> = ({
 }) => {
   const handleClick = () => {
     const bondNumber =
-      bond == 'Installation Bonds' ? 0 : bond == 'Time Contract Bonds' ? 1 : 2;
+      bond == 'Installation Bonds'
+        ? 0
+        : bond == 'Time Contract Bonds'
+        ? 1
+        : bond == 'Callable Bonds'
+        ? 2
+        : 3;
     setSelectedBond(bondNumber);
   };
   if (isAvailable) {
@@ -22,8 +28,8 @@ const BondButton: FC<BondButtonProps> = ({
       <div
         onClick={handleClick}
         className={`${
-          isSelected ? 'bg-black text-white' : ''
-        } cursor-pointer border border-black p-2`}
+          isSelected ? 'bg-red-500 text-white' : ''
+        } cursor-pointer border border-red-500 p-2 text-red-500`}
       >
         {bond}
       </div>

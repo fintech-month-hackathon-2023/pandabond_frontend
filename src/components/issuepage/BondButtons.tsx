@@ -12,7 +12,7 @@ const BondButtons: FC<BondButtonsProps> = ({
   setSelectedBond,
 }) => {
   return (
-    <div className='flex h-fit items-center justify-evenly'>
+    <div className='flex h-fit items-center justify-center gap-16'>
       <BondButton
         isAvailable={yoe > 0}
         isSelected={selectedBond == 0}
@@ -30,6 +30,12 @@ const BondButtons: FC<BondButtonsProps> = ({
         isSelected={selectedBond == 2}
         setSelectedBond={setSelectedBond}
         bond={'Callable Bonds'}
+      />
+      <BondButton
+        isAvailable={true}
+        isSelected={selectedBond == 3}
+        setSelectedBond={setSelectedBond}
+        bond={'Multi-Currency Bonds'}
       />
     </div>
   );

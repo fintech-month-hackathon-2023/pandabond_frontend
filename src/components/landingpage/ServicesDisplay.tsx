@@ -1,33 +1,25 @@
 import Link from 'next/link';
 import { FC, useState } from 'react';
+import IssueModal from './IssueModal';
+import PurchaseModal from './PurchaseModal';
 
 import ServiceDisplay from './ServiceDisplay';
 
 const ServicesDisplay: FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(0);
   const [service, setService] = useState('');
   return (
     <div className='flex justify-evenly'>
+      <IssueModal
+        isModalOpen={isModalOpen == 1}
+        setIsModalOpen={setIsModalOpen}
+      />
+      <PurchaseModal
+        isModalOpen={isModalOpen == 2}
+        setIsModalOpen={setIsModalOpen}
+      />
       <div
-        className={`${
-          isModalOpen ? '' : 'hidden'
-        } absolute top-1/2 left-1/2 z-10 flex h-2/3 w-1/2 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-5 rounded bg-white p-10`}
-      >
-        <div className='flex justify-between'>
-          <div>PandaBonds</div>
-          <div className='cursor-pointer' onClick={() => setIsModalOpen(false)}>
-            Close
-          </div>
-        </div>
-        <div className='grow border border-black'></div>
-        <Link
-          href={service == 'Create Your Own Bonds' ? '/issue' : '/purchase'}
-        >
-          Proceed
-        </Link>
-      </div>
-      <div
-        onClick={() => setIsModalOpen(false)}
+        onClick={() => setIsModalOpen(0)}
         className={`${
           isModalOpen ? 'cursor-pointer' : 'hidden'
         } absolute top-0 left-0 bottom-0 right-0 bg-black opacity-50`}
@@ -40,7 +32,7 @@ const ServicesDisplay: FC = () => {
       <ServiceDisplay
         setService={setService}
         setIsModalOpen={setIsModalOpen}
-        service='purchase bonds'
+        service='Purchase Bonds'
       />
     </div>
   );

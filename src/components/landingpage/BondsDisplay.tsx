@@ -1,6 +1,9 @@
 import { FC } from 'react';
 
-const BondsDisplay: FC = () => {
+type BondsDisplayProps = {
+  setIsModalOpen: (num: number) => void;
+};
+const BondsDisplay: FC<BondsDisplayProps> = ({ setIsModalOpen }) => {
   return (
     <div className='flex h-full flex-col items-center justify-center p-10'>
       <div className='mb-5 text-2xl font-bold'>The Bonds We Offer</div>
@@ -20,7 +23,13 @@ const BondsDisplay: FC = () => {
             <div className='text-xs'>
               Lowest Interest rates in the bond market. Bond Issuers are
               obligated to pay at regular intervals of the entire maturity
-              duration. Refer to percentages <a>here</a>
+              duration. Refer to percentages{' '}
+              <span
+                className='cursor-pointer text-red-500'
+                onClick={() => setIsModalOpen(4)}
+              >
+                here
+              </span>
             </div>
           </div>
           <div className='p-5 shadow'>

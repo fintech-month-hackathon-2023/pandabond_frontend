@@ -1,7 +1,7 @@
 /* eslint-disable unused-imports/no-unused-vars */
 import { FC, useState } from 'react';
 import BondsModal from './BondsModal';
-
+import InterestRatesModal from './InterestRatesModal';
 import IssueModal from './IssueModal';
 import PurchaseModal from './PurchaseModal';
 import ServiceDisplay from './ServiceDisplay';
@@ -11,11 +11,17 @@ const ServicesDisplay: FC = () => {
   return (
     <div className='m-20 flex flex-col items-center justify-center gap-10 rounded-3xl p-10 shadow shadow-black'>
       <div
-        onClick={() => setIsModalOpen(0)}
+        onClick={() =>
+          isModalOpen == 4 ? setIsModalOpen(1) : setIsModalOpen(0)
+        }
         className={`${
           isModalOpen ? 'cursor-pointer' : 'hidden'
         } fixed top-0 left-0 bottom-0 right-0 h-full bg-black opacity-50`}
       ></div>
+      <InterestRatesModal
+        isModalOpen={isModalOpen == 4}
+        setIsModalOpen={setIsModalOpen}
+      />
       <BondsModal
         isModalOpen={isModalOpen == 3}
         setIsModalOpen={setIsModalOpen}
@@ -53,13 +59,3 @@ const ServicesDisplay: FC = () => {
   );
 };
 export default ServicesDisplay;
-/*
-        <div className='flex w-full flex-col items-center justify-center'>
-          <div className='text-3xl font-bold'>Build-Your-Own-Bond</div>
-        </div>
-        <div className='flex w-full flex-col items-center justify-center'>
-          <div className='text-3xl font-bold'>
-            Invest In Blockchain Bonds Now!
-          </div>
-        </div>
- */

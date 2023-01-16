@@ -13,12 +13,15 @@ const DashBoard: FC = () => {
     { title: 'Installation Bonds', value: 750255, color: '#FF5733' },
   ];
   return (
-    <div className='flex h-full items-center'>
-      <PieChart className='w-2/3' lineWidth={30} radius={40} data={data} />
-      <div className='flex flex-col items-start gap-5'>
-        {data.map((bond) => (
-          <DashBoardItem bond={bond} key={bond.color} />
-        ))}
+    <div className='flex h-full flex-col'>
+      <div className='text-center text-2xl font-bold'>Total Value Logged</div>
+      <div className='flex h-full items-center'>
+        <PieChart className='w-2/3' lineWidth={30} radius={40} data={data} />
+        <div className='flex flex-col items-start gap-5'>
+          {data.map((bond) => (
+            <DashBoardItem bond={bond} key={bond.color} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -46,7 +49,7 @@ const DashBoardItem: FC<DashBoardItemProps> = ({ bond }) => {
         ></div>
         <div className='font-bold'>{bond.title}</div>
       </div>
-      <div>{USDollar.format(bond.value)} USD</div>
+      <div>{USDollar.format(bond.value)} USDC</div>
     </div>
   );
 };

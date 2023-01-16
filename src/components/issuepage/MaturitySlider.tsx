@@ -5,6 +5,7 @@ const MaturitySlider: FC = () => {
   return (
     <div className='flex justify-center gap-10'>
       <input
+        //@ts-ignore
         style={{ accentColor: '#ef4444' }}
         onChange={(event) => setVal(event.target.value)}
         className='w-1/2'

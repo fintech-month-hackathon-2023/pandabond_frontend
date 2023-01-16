@@ -8,9 +8,9 @@ type Bond = {
 };
 const DashBoard: FC = () => {
   const data = [
-    { title: 'Callable Bonds', value: 172000000, color: '#DAF7A6' },
+    { title: 'Callable Bonds', value: 72000000, color: '#DAF7A6' },
     { title: 'Time Contract Bonds', value: 95000000, color: '#FFC300' },
-    { title: 'Installation Bonds', value: 750255, color: '#FF5733' },
+    { title: 'Installation Bonds', value: 172000000, color: '#FF5733' },
   ];
   return (
     <div className='flex h-full flex-col'>

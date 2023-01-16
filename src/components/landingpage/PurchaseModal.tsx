@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Link from 'next/link';
 import DashBoard from '../DashBoard';
 import PurchaseIntro from './PurchaseIntro';
+import ProceedButton from '../ProceedButton';
 
 type PurchaseModalProps = {
   isModalOpen: boolean;
@@ -19,7 +20,7 @@ const PurchaseModal: FC<PurchaseModalProps> = ({
       } absolute top-1/2 left-1/2 z-10 flex h-2/3 w-2/3 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-5 rounded bg-white p-10`}
     >
       <div className='flex justify-between'>
-        <div className='text-xl font-bold'>Purchase Bonds</div>
+        <div className='text-2xl font-bold'>Purchase Bonds</div>
         <div
           className='cursor-pointer font-bold'
           onClick={() => setIsModalOpen(0)}
@@ -33,9 +34,7 @@ const PurchaseModal: FC<PurchaseModalProps> = ({
         </div>
         <div className='w-1/2 border border-black'>test</div>
       </div>
-      <Link className='font-bold text-red-500' href='/purchase'>
-        Start Now
-      </Link>
+      <ProceedButton page='/purchase'>Start Now</ProceedButton>
     </div>
   );
 };

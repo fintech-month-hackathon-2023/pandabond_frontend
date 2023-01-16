@@ -28,8 +28,8 @@ const BondButton: FC<BondButtonProps> = ({
       <div
         onClick={handleClick}
         className={`${
-          isSelected ? 'bg-red-500 text-white' : ''
-        } cursor-pointer border border-red-500 p-2 text-red-500`}
+          isSelected ? 'bg-red-500 text-white' : 'text-red-500'
+        } cursor-pointer border border-red-500 p-2`}
       >
         {bond}
       </div>

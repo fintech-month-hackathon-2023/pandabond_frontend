@@ -1,6 +1,9 @@
 import { FC, useState } from 'react';
 
-const CapitalSlider: FC = () => {
+type CapitalSliderProps = {
+  yoe: number;
+};
+const CapitalSlider: FC<CapitalSliderProps> = ({ yoe }) => {
   const [val, setVal] = useState('0');
   return (
     <div className='flex justify-center'>
@@ -12,12 +15,12 @@ const CapitalSlider: FC = () => {
           onChange={(event) => setVal(event.target.value)}
           className='grow'
           type='range'
-          min='.5'
-          max='10'
+          min='5'
+          max={`${yoe > 5 ? '500' : yoe > 2 ? '250' : '100'}`}
           value={val}
           step='.5'
         />
-        <div className='self-center'>{val} million USD</div>
+        <div className='self-center'>{val}K USD</div>
       </div>
     </div>
   );

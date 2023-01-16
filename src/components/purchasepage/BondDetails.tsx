@@ -8,14 +8,28 @@ const BondDetails: FC<BondDetailsProps> = ({ bond }) => {
   return (
     <div className='flex grow justify-between'>
       <div>
-        <div>Company Name: {bond.symbol}</div>
-        <div>Bond Type: {bond.bondType}</div>
-        <div>Maturity Date: {bond.maturityDate}</div>
-        <div>Coupon Rate: {bond.couponRate}</div>
+        <div className='text-lg'>
+          <span className='font-bold'>Bond Type: </span>
+          {bond.bondType}
+        </div>
+        <div className='text-lg'>
+          <span className='font-bold'>Maturity Date: </span>
+          {bond.maturityDate}
+        </div>
+        <div className='text-lg'>
+          <span className='font-bold'>Coupon Rate: </span>
+          {bond.couponRate}
+        </div>
       </div>
       <div>
-        <div>Volume: {bond.volume}</div>
-        <div>Cost: {bond.cost}</div>
+        <div className='text-lg'>
+          <span className='font-bold'>Volume: </span>
+          {bond.volume}
+        </div>
+        <div className='text-lg'>
+          <span className='font-bold'>Cost: </span>
+          {bond.cost}
+        </div>
       </div>
     </div>
   );

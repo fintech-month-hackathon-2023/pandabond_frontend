@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Link from 'next/link';
 import DashBoard from '../DashBoard';
 import BondsDisplay from './BondsDisplay';
+import ProceedButton from '../ProceedButton';
 
 type IssueModalProps = {
   isModalOpen: boolean;
@@ -16,7 +17,7 @@ const IssueModal: FC<IssueModalProps> = ({ isModalOpen, setIsModalOpen }) => {
       } absolute top-1/2 left-1/2 z-10 flex h-2/3 w-2/3 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-5 rounded bg-white p-10`}
     >
       <div className='flex justify-between'>
-        <div className='text-xl font-bold'>Issue Bonds</div>
+        <div className='text-2xl font-bold'>Issue Bonds</div>
         <div
           className='cursor-pointer font-bold '
           onClick={() => setIsModalOpen(0)}
@@ -28,13 +29,11 @@ const IssueModal: FC<IssueModalProps> = ({ isModalOpen, setIsModalOpen }) => {
         <div className='w-1/2'>
           <DashBoard />
         </div>
-        <div className='w-1/2 text-red-500'>
+        <div className='w-1/2 '>
           <BondsDisplay />
         </div>
       </div>
-      <Link className='font-bold text-red-500' href='/issue'>
-        Start Now
-      </Link>
+      <ProceedButton page='/issue'>Start Now</ProceedButton>
     </div>
   );
 };

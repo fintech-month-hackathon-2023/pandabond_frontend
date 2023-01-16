@@ -6,6 +6,7 @@ import MaturitySlider from '@/components/issuepage/MaturitySlider';
 import CapitalSlider from '@/components/issuepage/CapitalSlider';
 import CouponRateInput from '@/components/issuepage/CouponRateInput';
 import IssueButton from '@/components/issuepage/IssueButton';
+import FinePrint from '@/components/issuepage/FinePrint';
 
 const IssuePage: NextPage = () => {
   const [selectedBond, setSelectedBond] = useState(0);
@@ -34,7 +35,7 @@ const IssuePage: NextPage = () => {
           <div className='self-center text-lg font-bold text-red-500'>
             Volume/Capital
           </div>
-          <CapitalSlider />
+          <CapitalSlider yoe={yoe} />
         </div>
         <div className='flex flex-col'>
           <div className='self-center text-lg font-bold text-red-500'>
@@ -42,11 +43,21 @@ const IssuePage: NextPage = () => {
           </div>
           <CouponRateInput bondNumber={selectedBond} />
         </div>
-        <div className='self-center text-lg font-bold text-red-500'>
-          Relevant Company Financial Details
+        <div className='flex w-3/4 self-center'>
+          <div className='flex-1 text-center text-lg font-bold text-red-500'>
+            Company Financial Statements
+          </div>
+          <input className='flex-1' type='file' />
         </div>
-        <input className='self-center' type='file' />
+        <div className='flex w-3/4 self-center'>
+          <div className='flex-1 text-center text-lg font-bold text-red-500'>
+            Relevant Company Financial Details
+          </div>
+          <input className='flex-1 self-center' type='file' />
+        </div>
         <IssueButton page='/receipt'>Issue Bond</IssueButton>
+        <hr />
+        <FinePrint />
       </div>
     </div>
   );

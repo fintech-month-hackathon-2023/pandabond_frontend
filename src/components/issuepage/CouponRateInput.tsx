@@ -5,7 +5,7 @@ type CouponRateInput = {
 };
 
 const CouponRateInput: FC<CouponRateInput> = ({ bondNumber }) => {
-  const recommendedRates = ['4.00', '6.00', '8.00'];
+  const recommendedRates = ['6.00', '8.00', '10.00'];
   const [couponRate, setCouponRate] = useState(recommendedRates[bondNumber]);
   return (
     <div className='flex justify-evenly'>

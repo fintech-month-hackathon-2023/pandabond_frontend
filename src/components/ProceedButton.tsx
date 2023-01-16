@@ -1,17 +1,18 @@
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
-type IssueButtonProps = {
+type ProceedButtonProps = {
   children: string;
   page: string;
 };
-const IssueButton: FC<IssueButtonProps> = ({ children, page }) => {
+const ProceedButton: FC<ProceedButtonProps> = ({ children, page }) => {
   const [isHover, setIsHover] = useState(false);
   return (
     <Link
       href={page}
-      className={`${isHover ? 'bg-red-500 text-white' : 'text-red-500'
-        } cursor-pointer self-center rounded-3xl border border-red-500 p-2`}
+      className={`${isHover ? 'bg-red-500 text-white' : 'text-red-500'} 
+        w-fit cursor-pointer rounded-3xl  border 
+      border-red-500 p-2 font-bold`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
@@ -19,4 +20,4 @@ const IssueButton: FC<IssueButtonProps> = ({ children, page }) => {
     </Link>
   );
 };
-export default IssueButton;
+export default ProceedButton;

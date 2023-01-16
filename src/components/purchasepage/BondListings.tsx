@@ -5,7 +5,7 @@ import BondListing from './BondListing';
 import PurchaseBond from './PurchaseBond';
 
 export type Bond = {
-  symbol: string;
+  companyName: string;
   maturityDate: string;
   couponRate: string;
   volume: string;
@@ -15,7 +15,7 @@ export type Bond = {
 const BondListings: FC = () => {
   const bonds: Bond[] = [
     {
-      symbol: 'A',
+      companyName: 'A',
       maturityDate: '15-01-24',
       couponRate: '4.00%',
       volume: '100m',
@@ -23,7 +23,7 @@ const BondListings: FC = () => {
       bondType: 'Installation Bond',
     },
     {
-      symbol: 'B',
+      companyName: 'B',
       maturityDate: '15-07-23',
       couponRate: '6.00%',
       volume: '30m',
@@ -31,7 +31,7 @@ const BondListings: FC = () => {
       bondType: 'Time Contract Bond',
     },
     {
-      symbol: 'C',
+      companyName: 'C',
       maturityDate: '15-01-25',
       couponRate: '8.00%',
       volume: '80m',
@@ -51,11 +51,16 @@ const BondListings: FC = () => {
       <div
         className={`${
           isModalOpen ? '' : 'hidden'
-        } absolute top-1/2 left-1/2 z-10 flex h-2/3 w-1/2 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-5 rounded bg-white p-10`}
+        } absolute top-1/2 left-1/2 z-10 flex h-1/3 w-1/3 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-5 rounded bg-white p-10`}
       >
         <div className='flex justify-between'>
-          <div>PandaBonds</div>
-          <div className='cursor-pointer' onClick={() => setIsModalOpen(false)}>
+          <div className='text-2xl font-bold'>
+            {selectedBond && selectedBond.companyName}
+          </div>
+          <div
+            className='cursor-pointer font-bold'
+            onClick={() => setIsModalOpen(false)}
+          >
             Close
           </div>
         </div>
@@ -68,12 +73,19 @@ const BondListings: FC = () => {
           isModalOpen ? 'cursor-pointer' : 'hidden'
         } absolute top-0 left-0 bottom-0 right-0 bg-black opacity-50`}
       ></div>
-      <div className='m-10 flex h-full flex-col items-center'>
+      <div className='m-10 flex h-full flex-col items-center rounded shadow shadow-black'>
+        <div className='flex w-full p-5 font-bold'>
+          <div className='flex-1'>Company Name</div>
+          <div className='flex-1'>Coupon Rate</div>
+          <div className='flex-1'>Maturity Date</div>
+          <div className='flex-1'>Bond Type</div>
+          <div className='flex-1'>Company Details</div>
+        </div>
         {bonds.map((bond, index) => (
           <BondListing
             bond={bond}
             index={index}
-            key={bond.symbol}
+            key={bond.companyName}
             handleClick={handleClick}
           />
         ))}

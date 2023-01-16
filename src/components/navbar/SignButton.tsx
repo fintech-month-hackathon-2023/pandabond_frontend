@@ -11,8 +11,8 @@ const SignButton: FC<SignButtonProps> = ({ children, page }) => {
     <Link
       href={page}
       className={`${
-        isHover ? 'bg-red-500 text-white' : ''
-      } cursor-pointer rounded-2xl border border-red-500 p-2 text-red-500`}
+        isHover ? 'bg-red-500 text-white' : 'text-red-500'
+      } cursor-pointer rounded-3xl border border-red-500 p-2`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >

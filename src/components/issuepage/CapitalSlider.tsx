@@ -5,7 +5,7 @@ const CapitalSlider: FC = () => {
   return (
     <div className='flex justify-center gap-10'>
       <input
-        // style={{ accentColor: '#ef4444' }}
+        style={{ accentColor: '#ef4444' }}
         onChange={(event) => setVal(event.target.value)}
         className='w-1/2'
         type='range'

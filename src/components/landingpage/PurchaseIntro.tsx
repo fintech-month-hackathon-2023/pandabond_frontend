@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const PurchaseIntro: FC = () => {
   return (
-    <div className='flex flex-col gap-5'>
+    <div className='flex h-full flex-col justify-center gap-5'>
       <div className='text-red-500'>
         <div className='text-lg font-bold'>The way we beat inflation</div>
         <div>

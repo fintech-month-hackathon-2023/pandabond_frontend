@@ -24,6 +24,9 @@ module.exports = {
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
         dark: '#222222',
+        pie1: '#DAF7A6',
+        pie2: '#FFC300',
+        pie3: '#FF5733',
       },
       keyframes: {
         flicker: {

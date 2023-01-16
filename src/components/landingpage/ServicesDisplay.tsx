@@ -1,5 +1,6 @@
 /* eslint-disable unused-imports/no-unused-vars */
 import { FC, useState } from 'react';
+import BondsModal from './BondsModal';
 
 import IssueModal from './IssueModal';
 import PurchaseModal from './PurchaseModal';
@@ -15,6 +16,10 @@ const ServicesDisplay: FC = () => {
           isModalOpen ? 'cursor-pointer' : 'hidden'
         } fixed top-0 left-0 bottom-0 right-0 h-full bg-black opacity-50`}
       ></div>
+      <BondsModal
+        isModalOpen={isModalOpen == 3}
+        setIsModalOpen={setIsModalOpen}
+      />
       <IssueModal
         isModalOpen={isModalOpen == 1}
         setIsModalOpen={setIsModalOpen}

@@ -33,7 +33,12 @@ const IssueModal: FC<IssueModalProps> = ({ isModalOpen, setIsModalOpen }) => {
           <BondsDisplay />
         </div>
       </div>
-      <ProceedButton page='/issue'>Start Now</ProceedButton>
+      <div
+        className='w-fit cursor-pointer rounded-3xl border border-red-500 p-2 font-bold text-red-500'
+        onClick={() => setIsModalOpen(3)}
+      >
+        Select Bond
+      </div>
     </div>
   );
 };

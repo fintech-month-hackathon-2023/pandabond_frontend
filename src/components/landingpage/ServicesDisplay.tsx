@@ -1,8 +1,8 @@
-import Link from 'next/link';
+/* eslint-disable unused-imports/no-unused-vars */
 import { FC, useState } from 'react';
+
 import IssueModal from './IssueModal';
 import PurchaseModal from './PurchaseModal';
-
 import ServiceDisplay from './ServiceDisplay';
 
 const ServicesDisplay: FC = () => {

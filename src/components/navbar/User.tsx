@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import SignButton from './SignButton';
 
 type UserProps = {
@@ -10,8 +11,8 @@ const User: FC<UserProps> = ({ isLoggedIn }) => {
   } else {
     return (
       <div className='flex justify-between gap-10'>
-        <SignButton>Sign In</SignButton>
-        <SignButton>Sign Up</SignButton>
+        <SignButton page='/login'>Sign In</SignButton>
+        <SignButton page='/login/SignUpPage'>Sign Up</SignButton>
       </div>
     );
   }

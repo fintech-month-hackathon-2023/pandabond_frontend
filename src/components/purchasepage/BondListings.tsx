@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import ProceedButton from '../ProceedButton';
 
 import BondDetails from './BondDetails';
 import BondListing from './BondListing';
@@ -65,7 +66,8 @@ const BondListings: FC = () => {
           </div>
         </div>
         {selectedBond && <BondDetails bond={selectedBond} />}
-        <PurchaseBond />
+        <ProceedButton page='/receipt'>Purchase Bond</ProceedButton>
+        {/*<PurchaseBond />*/}
       </div>
       <div
         onClick={() => setIsModalOpen(false)}

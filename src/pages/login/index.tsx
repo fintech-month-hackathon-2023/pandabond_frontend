@@ -65,7 +65,7 @@ const SignInPage: NextPage = () => {
                   href='#'
                   className='inline-block rounded-full border-2 border-red-500 px-12 py-2 font-semibold text-red-500 hover:bg-red-500 hover:text-white'
                 >
-                  Sign Up
+                  Sign In
                 </a>
               </div>
             </div>

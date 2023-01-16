@@ -55,7 +55,7 @@ const IssuePage: NextPage = () => {
           </div>
           <input className='flex-1 self-center' type='file' />
         </div>
-        <IssueButton page='/receipt'>Issue Bond</IssueButton>
+        <IssueButton page='/'>Issue Bond</IssueButton>
         <hr />
         <FinePrint />
       </div>

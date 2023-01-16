@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Link from 'next/link';
 import DashBoard from '../DashBoard';
 import BondsDisplay from './BondsDisplay';
 import ProceedButton from '../ProceedButton';
@@ -33,13 +32,16 @@ const IssueModal: FC<IssueModalProps> = ({ isModalOpen, setIsModalOpen }) => {
           <BondsDisplay setIsModalOpen={setIsModalOpen} />
         </div>
       </div>
+      <ProceedButton page='/issue'>Issue Bond</ProceedButton>
+    </div>
+  );
+};
+export default IssueModal;
+/*
       <div
         className='w-fit cursor-pointer rounded-3xl border border-red-500 p-2 font-bold text-red-500'
         onClick={() => setIsModalOpen(3)}
       >
         Select Bond
       </div>
-    </div>
-  );
-};
-export default IssueModal;
+ */

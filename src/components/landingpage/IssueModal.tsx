@@ -30,10 +30,7 @@ const IssueModal: FC<IssueModalProps> = ({ isModalOpen, setIsModalOpen }) => {
           <DashBoard />
         </div>
         <div className='w-1/2 '>
-          <BondsDisplay
-            isModalOpen={isModalOpen}
-            setIsModalOpen={setIsModalOpen}
-          />
+          <BondsDisplay setIsModalOpen={setIsModalOpen} />
         </div>
       </div>
       <div

@@ -3,22 +3,24 @@ import { FC } from 'react';
 type ServiceDisplayProps = {
   service: string;
   setIsModalOpen: (num: number) => void;
-  setService: (service: string) => void;
 };
 const ServiceDisplay: FC<ServiceDisplayProps> = ({
   service,
-  setService,
   setIsModalOpen,
 }) => {
   return (
     <div
       onClick={() => {
-        setIsModalOpen(service == 'Create Your Own Bonds' ? 1 : 2);
-        setService(service);
+        setIsModalOpen(service == 'Corporate' ? 1 : 2);
       }}
-      className='cursor-pointer'
+      className='h-1/2 w-1/4 cursor-pointer rounded-lg bg-red-500 p-10'
     >
-      {service}
+      <div className='text-xl font-bold text-white'>{service}</div>
+      <div className='text-white'>
+        {service == 'Corporate'
+          ? `Build the foundation for tomorrow's success, fuel your progress and stability through bond issuance`
+          : `Invest in our bonds, Invest in your future`}
+      </div>
     </div>
   );
 };

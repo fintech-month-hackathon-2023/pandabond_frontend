@@ -7,9 +7,8 @@ import ServiceDisplay from './ServiceDisplay';
 
 const ServicesDisplay: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(0);
-  const [service, setService] = useState('');
   return (
-    <div className='flex justify-evenly'>
+    <div className='flex h-1/3 justify-evenly pl-10 pr-10'>
       <IssueModal
         isModalOpen={isModalOpen == 1}
         setIsModalOpen={setIsModalOpen}
@@ -22,18 +21,10 @@ const ServicesDisplay: FC = () => {
         onClick={() => setIsModalOpen(0)}
         className={`${
           isModalOpen ? 'cursor-pointer' : 'hidden'
-        } absolute top-0 left-0 bottom-0 right-0 bg-black opacity-50`}
+        } absolute top-0 left-0 bottom-0 right-0 h-full bg-black opacity-50`}
       ></div>
-      <ServiceDisplay
-        setService={setService}
-        setIsModalOpen={setIsModalOpen}
-        service='Create Your Own Bonds'
-      />
-      <ServiceDisplay
-        setService={setService}
-        setIsModalOpen={setIsModalOpen}
-        service='Purchase Bonds'
-      />
+      <ServiceDisplay setIsModalOpen={setIsModalOpen} service='Corporate' />
+      <ServiceDisplay setIsModalOpen={setIsModalOpen} service='Consumer' />
     </div>
   );
 };

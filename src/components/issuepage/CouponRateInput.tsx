@@ -20,11 +20,14 @@ const CouponRateInput: FC<CouponRateInput> = ({ bondNumber }) => {
         >
           -
         </button>
-        <input
-          onChange={(event) => setCouponRate(event.target.value)}
-          className='w-1/3 p-2 text-center'
-          value={couponRate + '%'}
-        />
+        <div className='flex w-1/3 items-center justify-center'>
+          <input
+            onChange={(event) => setCouponRate(event.target.value)}
+            className='w-full text-center'
+            value={couponRate}
+          />
+          <div>%</div>
+        </div>
         <button
           onClick={() =>
             setCouponRate((prev) => {

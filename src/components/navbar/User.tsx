@@ -10,7 +10,7 @@ const User: FC<UserProps> = ({ isLoggedIn }) => {
     return <div>Welcome User!</div>;
   } else {
     return (
-      <div className='flex justify-between gap-10'>
+      <div className='flex justify-between gap-5'>
         <SignButton page='/login'>Sign In</SignButton>
         <SignButton page='/login/SignUpPage'>Sign Up</SignButton>
       </div>

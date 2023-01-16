@@ -3,6 +3,8 @@ import Link from 'next/link';
 import DashBoard from '../DashBoard';
 import PurchaseIntro from './PurchaseIntro';
 import ProceedButton from '../ProceedButton';
+import bonds from '../../../public/images/bonds.jpg';
+import Image from 'next/image';
 
 type PurchaseModalProps = {
   isModalOpen: boolean;
@@ -28,11 +30,11 @@ const PurchaseModal: FC<PurchaseModalProps> = ({
           Close
         </div>
       </div>
-      <div className='flex h-1/2 grow'>
+      <div className='flex h-1/2 grow items-center'>
         <div className='w-1/2'>
           <PurchaseIntro />
         </div>
-        <div className='w-1/2 border border-black'>test</div>
+        <Image className='w-1/2' src={bonds} alt='bonds of the week' />
       </div>
       <ProceedButton page='/purchase'>Start Now</ProceedButton>
     </div>

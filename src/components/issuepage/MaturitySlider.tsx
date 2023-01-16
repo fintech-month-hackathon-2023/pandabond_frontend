@@ -5,6 +5,7 @@ const MaturitySlider: FC = () => {
   return (
     <div className='flex justify-center gap-10'>
       <input
+        //eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
         style={{ accentColor: '#ef4444' }}
         onChange={(event) => setVal(event.target.value)}

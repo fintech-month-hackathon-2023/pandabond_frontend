@@ -27,6 +27,11 @@ type DashBoardItemProps = {
   bond: Bond;
 };
 const DashBoardItem: FC<DashBoardItemProps> = ({ bond }) => {
+  const USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    notation: 'compact',
+  });
   return (
     <div className='flex flex-col '>
       <div className='flex items-center justify-start gap-5'>
@@ -41,7 +46,7 @@ const DashBoardItem: FC<DashBoardItemProps> = ({ bond }) => {
         ></div>
         <div className='font-bold'>{bond.title}</div>
       </div>
-      <div>{bond.value} USD</div>
+      <div>{USDollar.format(bond.value)} USD</div>
     </div>
   );
 };

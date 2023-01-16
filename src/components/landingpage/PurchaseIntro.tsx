@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import Image from 'next/image';
+import whyPanda from '../../../public/images/whypanda.png';
 
 const PurchaseIntro: FC = () => {
   return (
@@ -6,7 +8,7 @@ const PurchaseIntro: FC = () => {
       <div className='mb-5 self-center text-2xl font-bold'>
         Your One Stop Shop for Web3 Bonds
       </div>
-      <div className='p-5 text-red-500 shadow'>
+      <div className='p-5 text-red-500'>
         <div className='text-lg font-bold'>The way we beat inflation</div>
         <div>
           Investing in bonds can help to beat inflation since they tend to have
@@ -15,16 +17,13 @@ const PurchaseIntro: FC = () => {
           effects of inflation.
         </div>
       </div>
-      <div className='p-5 text-red-500 shadow'>
-        <div className='text-lg font-bold'>Why invest in PandaBonds?</div>
-        <ol>
-          <li>Additional Income</li>
-          <li>Portfolio Diversification</li>
-          <li>Preservation of Capital</li>
-          <li>Inflation Hedge</li>
-          <li>Credit Risk</li>
-        </ol>
-      </div>
+      <Image
+        className='self-center'
+        src={whyPanda}
+        alt='whypanda'
+        width='400'
+        height='400'
+      />
     </div>
   );
 };

@@ -27,6 +27,8 @@ module.exports = {
         pie1: '#DAF7A6',
         pie2: '#FFC300',
         pie3: '#FF5733',
+        salmon: '#FA8072',
+        yellow: '#FFD8B1',
       },
       flex: {
         4: '4 4 0%',

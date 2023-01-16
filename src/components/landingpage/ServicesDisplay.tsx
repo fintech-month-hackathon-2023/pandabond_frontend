@@ -24,8 +24,8 @@ const ServicesDisplay: FC = () => {
         setIsModalOpen={setIsModalOpen}
       />
       <div className='flex flex-col items-center justify-center'>
-        <div className='text-5xl font-bold'>"Bonds as a Service"</div>
-        <div className='w-2/3 text-center text-lg'>
+        <div className='pb-5 text-5xl font-bold'>"Bonds as a Service"</div>
+        <div className='w-3/4 text-center text-lg'>
           Empowering Start-ups, SMEs and investors one step at a time - Invest
           in blockchain for a smart, more secure future. Live your dream NOW -
           We provide budding companies and brilliant entrepreneurs with a chance
@@ -34,19 +34,27 @@ const ServicesDisplay: FC = () => {
           suit the needs of our clients.
         </div>
       </div>
-      <div className='flex h-1/3 justify-evenly pl-10 pr-10'>
-        <div className='flex w-full flex-col items-center justify-center'>
-          <div className='text-3xl font-bold'>Build-Your-Own-Bond</div>
-          <ServiceDisplay setIsModalOpen={setIsModalOpen} service='Corporate' />
-        </div>
-        <div className='flex w-full flex-col items-center justify-center'>
-          <div className='text-3xl font-bold'>
-            Invest In Blockchain Bonds Now!
-          </div>
-          <ServiceDisplay setIsModalOpen={setIsModalOpen} service='Consumer' />
-        </div>
+      <div className='flex w-3/4 justify-center'>
+        <ServiceDisplay
+          setIsModalOpen={setIsModalOpen}
+          service='Build-Your-Own-Bond'
+        />
+        <ServiceDisplay
+          setIsModalOpen={setIsModalOpen}
+          service='Invest In Blockchain Bonds Now'
+        />
       </div>
     </div>
   );
 };
 export default ServicesDisplay;
+/*
+        <div className='flex w-full flex-col items-center justify-center'>
+          <div className='text-3xl font-bold'>Build-Your-Own-Bond</div>
+        </div>
+        <div className='flex w-full flex-col items-center justify-center'>
+          <div className='text-3xl font-bold'>
+            Invest In Blockchain Bonds Now!
+          </div>
+        </div>
+ */

@@ -39,7 +39,7 @@ const DashBoardItem: FC<DashBoardItemProps> = ({ bond }) => {
               : 'bg-pie3'
           }`}
         ></div>
-        <div>{bond.title}</div>
+        <div className='font-bold'>{bond.title}</div>
       </div>
       <div>{bond.value} USD</div>
     </div>

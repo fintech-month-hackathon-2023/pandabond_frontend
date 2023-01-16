@@ -5,6 +5,7 @@ import BondButtons from '@/components/issuepage/BondButtons';
 import MaturitySlider from '@/components/issuepage/MaturitySlider';
 import CapitalSlider from '@/components/issuepage/CapitalSlider';
 import CouponRateInput from '@/components/issuepage/CouponRateInput';
+import IssueButton from '@/components/issuepage/IssueButton';
 
 const IssuePage: NextPage = () => {
   const [selectedBond, setSelectedBond] = useState(0);
@@ -45,6 +46,7 @@ const IssuePage: NextPage = () => {
           Relevant Company Financial Details
         </div>
         <input className='self-center' type='file' />
+        <IssueButton page='/receipt'>Issue Bond</IssueButton>
       </div>
     </div>
   );

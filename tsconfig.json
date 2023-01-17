@@ -20,7 +20,14 @@
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/purchasepage/PurchaseBond.tsx",
+    "src/components/instalment/Register.js",
+    "src/components/purchasepage/ConnectWallet.js"
+  ],
   "exclude": ["node_modules"],
   "moduleResolution": ["node_modules", ".next", "node"]
 }

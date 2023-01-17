@@ -11,3 +11,5 @@ export const InstallmentBondFactoryAddress =
 
 export const SoulBoundTokenAddress =
   '0x4dEa224a2e0C446371c6610142B35FF346F9Ab43';
+
+export const BondDBAddress = '0x42421c4DE7FC26F80141E21d3ee4C8fe99DF3Dca';

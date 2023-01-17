@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import DashBoard from '../DashBoard';
+
 import BondsDisplay from './BondsDisplay';
+import DashBoard from '../DashBoard';
 import ProceedButton from '../ProceedButton';
 
 type IssueModalProps = {
@@ -32,7 +33,7 @@ const IssueModal: FC<IssueModalProps> = ({ isModalOpen, setIsModalOpen }) => {
           <BondsDisplay setIsModalOpen={setIsModalOpen} />
         </div>
       </div>
-      <ProceedButton page='/issue'>Issue Bond</ProceedButton>
+      <ProceedButton page='/instalment'>Issue Bond</ProceedButton>
     </div>
   );
 };

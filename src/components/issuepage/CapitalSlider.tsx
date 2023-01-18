@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
 
 type CapitalSliderProps = {
-  yoe: number;
+  bondNumber: number;
 };
-const CapitalSlider: FC<CapitalSliderProps> = ({ yoe }) => {
+const CapitalSlider: FC<CapitalSliderProps> = ({ bondNumber }) => {
   const [val, setVal] = useState('0');
   return (
     <div className='flex justify-center'>
@@ -16,7 +16,7 @@ const CapitalSlider: FC<CapitalSliderProps> = ({ yoe }) => {
           className='grow'
           type='range'
           min='5'
-          max={`${yoe > 5 ? '500' : yoe > 2 ? '250' : '100'}`}
+          max={`${bondNumber == 2 ? '500' : bondNumber == 1 ? '250' : '100'}`}
           value={val}
           step='.5'
         />

@@ -52,12 +52,12 @@ const BondsModal: FC<BondsModalProps> = ({ isModalOpen, setIsModalOpen }) => {
       <ProceedButton
         page={`${
           selectedBond == 0
-            ? 'instalment'
+            ? 'registerinstalment'
             : selectedBond == 1
-            ? 'simple'
+            ? 'registerstandard'
             : selectedBond == 2
-            ? 'callable'
-            : 'dual'
+            ? 'registercallable'
+            : 'registerdual'
         }`}
       >
         Start Now

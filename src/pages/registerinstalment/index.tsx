@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
-
-import Register from '@/components/instalment/Register';
+import Button from '@/components/buttons/Button';
 import NavBar from '@/components/NavBar';
 
 const InstalmentPage: NextPage = () => {
@@ -8,7 +7,7 @@ const InstalmentPage: NextPage = () => {
     <div>
       <NavBar isLoggedIn={true} />
       <div className='flex justify-center'>
-        <Register />
+        <Button>Register</Button>
       </div>
     </div>
   );

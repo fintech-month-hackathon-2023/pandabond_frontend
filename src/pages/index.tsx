@@ -27,8 +27,7 @@ export default function HomePage() {
         <title>PandaBond</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className='relative h-screen'>
-        <NavBar isLoggedIn={false} />
+      <div className='relative h-fit'>
         <MainContent />
         <ServicesDisplay />
       </div>

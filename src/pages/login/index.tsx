@@ -87,3 +87,9 @@ const SignInPage: NextPage = () => {
   );
 };
 export default SignInPage;
+
+export async function getStaticProps(context) {
+  return {
+    props: { noNavBar: true },
+  };
+}

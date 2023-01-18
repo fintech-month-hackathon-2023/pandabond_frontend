@@ -90,7 +90,7 @@ export default function SignUpPage() {
       .join('+');
     await fetch(
       endpoint +
-        `/register?account=${account}&name=${name1}&tier=${tier}&unhashed=${unhashed}`,
+      `/register?account=${account}&name=${name1}&tier=${tier}&unhashed=${unhashed}`,
       fetchConfig
     );
   };
@@ -202,4 +202,9 @@ export default function SignUpPage() {
       </main>
     </div>
   );
+};
+export async function getStaticProps(context) {
+  return {
+    props: { noNavBar: true },
+  };
 }

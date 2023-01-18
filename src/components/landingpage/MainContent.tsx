@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const MainContent: FC = () => {
   return (
-    <div className='flex h-1/3 w-screen flex-col items-center justify-center '>
+    <div className='flex h-1/2 w-screen flex-col items-center justify-center pb-20 pt-20 '>
       <div className='self-start pl-5 pb-5 text-5xl font-bold'>
         Liberating Funding Troubles
       </div>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { NextPage } from 'next';
 import NavBar from '@/components/NavBar';
 import MaturitySlider from '@/components/issuepage/MaturitySlider';
@@ -5,8 +6,10 @@ import CapitalSlider from '@/components/issuepage/CapitalSlider';
 import CouponRateInput from '@/components/issuepage/CouponRateInput';
 import IssueButton from '@/components/issuepage/IssueButton';
 import FinePrint from '@/components/issuepage/FinePrint';
+import ProceedButton from '@/components/ProceedButton';
 
 const IssueInstalment: NextPage = () => {
+  const [isFactoryCreated, setIsFactoryCreated] = useState(false);
   return (
     <div className='h-screen'>
       <NavBar isLoggedIn={true} />
@@ -41,7 +44,12 @@ const IssueInstalment: NextPage = () => {
           </div>
           <input className='flex-1 self-center' type='file' />
         </div>
-        <IssueButton page='/'>Issue Bond</IssueButton>
+        <div className='flex justify-center gap-10'>
+          {isFactoryCreated || (
+            <ProceedButton page='/'>Create Factory</ProceedButton>
+          )}
+          <IssueButton page='/'>Issue Bond</IssueButton>
+        </div>
         <hr />
         <FinePrint />
       </div>

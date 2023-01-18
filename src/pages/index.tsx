@@ -5,7 +5,6 @@ import MainContent from '@/components/landingpage/MainContent';
 import ServicesDisplay from '@/components/landingpage/ServicesDisplay';
 import Layout from '@/components/layout/Layout';
 import NavBar from '@/components/NavBar';
-import ConnectWallet from '@/components/purchasepage/ConnectWallet';
 import Seo from '@/components/Seo';
 
 /**
@@ -30,7 +29,6 @@ export default function HomePage() {
       </Head>
       <div className='relative h-screen'>
         <NavBar isLoggedIn={false} />
-        <ConnectWallet />
         <MainContent />
         <ServicesDisplay />
       </div>

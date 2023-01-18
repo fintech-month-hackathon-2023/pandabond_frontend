@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import ProceedButton from '@/components/ProceedButton';
 import type { NextPage } from 'next';
-import NavBar from '@/components/NavBar';
 import MaturitySlider from '@/components/issuepage/MaturitySlider';
 import CapitalSlider from '@/components/issuepage/CapitalSlider';
 import CouponRateInput from '@/components/issuepage/CouponRateInput';
@@ -12,7 +11,6 @@ const IssueDual: NextPage = () => {
   const [isFactoryCreated, setIsFactoryCreated] = useState(false);
   return (
     <div className='h-screen'>
-      <NavBar isLoggedIn={true} />
       <div className='flex h-full flex-col gap-10'>
         <div className='flex flex-col'>
           <div className='self-center text-lg font-bold text-red-500'>

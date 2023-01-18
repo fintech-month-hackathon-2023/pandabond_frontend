@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import type { NextPage } from 'next';
-import NavBar from '@/components/NavBar';
 import BondButtons from '@/components/issuepage/BondButtons';
 import MaturitySlider from '@/components/issuepage/MaturitySlider';
 import CapitalSlider from '@/components/issuepage/CapitalSlider';
@@ -13,7 +12,6 @@ const IssuePage: NextPage = () => {
   const [yoe, setYOE] = useState(2);
   return (
     <div className='h-screen'>
-      <NavBar isLoggedIn={true} />
       <div className='flex h-full flex-col gap-10'>
         <div className='flex flex-col gap-1'>
           <div className='text-center text-2xl font-bold text-red-500'>

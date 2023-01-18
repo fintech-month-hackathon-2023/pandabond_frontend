@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useState } from 'react';
 import { BsShop } from 'react-icons/bs';
@@ -6,7 +7,7 @@ import { FaGoogle, FaRegEnvelope } from 'react-icons/fa';
 import { MdLockOutline } from 'react-icons/md';
 import UnstyledLink from 'src/components/links/UnstyledLink';
 
-export default function SignUpPage() {
+const SignUpPage: NextPage = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [uen, setUen] = useState<string>('');
@@ -102,4 +103,10 @@ export default function SignUpPage() {
       </main>
     </div>
   );
+};
+export default SignUpPage;
+export async function getStaticProps(context) {
+  return {
+    props: { noNavBar: true },
+  };
 }
